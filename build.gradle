@@ -1,0 +1,26 @@
+System.setProperty("java.awt.headless", "true") // mergeDebugResources spawns annoying AWT UI
+
+buildscript {
+  apply from: "constants.gradle"
+
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath "com.android.tools.build:gradle:$versions.android"
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
+    classpath kotlin.plugin
+  }
+}
+
+apply plugin: 'com.github.ben-manes.versions'
+
+allprojects {
+  repositories {
+    jcenter() // anko and such
+  }
+  tasks.withType(JavaForkOptions) {
+    jvmArgs '-Djava.awt.headless=true'
+  }
+}

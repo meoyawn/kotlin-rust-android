@@ -1,0 +1,11 @@
+[package]
+name = "hello"
+version = "0.1.0"
+authors = ["adelnizamutdinov"]
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+jni-sys = "0.1.0"
+cesu8 = "1.1.0"

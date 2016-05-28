@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+apply plugin: "kotlin-android"
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.3"
+
+  defaultConfig {
+    applicationId "adeln.kotlinrustandroid"
+    minSdkVersion 14
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+
+  sourceSets.main.jniLibs.srcDirs += "jniLibs"
+}
+
+dependencies {
+  compile kotlin.stdlib
+}

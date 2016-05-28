@@ -1,0 +1,78 @@
+ext {
+  CI = "true".equals(System.getenv("CI"))
+
+  minSdk = 15
+  targetSdk = 23
+  buildTools = "23.0.3"
+
+  versions = [
+      android     : "2.1.0",
+      anko        : "0.8.3",
+      either      : "1.0.2",
+      espresso    : "2.2.2",
+      fabric      : "1.21.6",
+      flow        : "0.12",
+      jacoco      : "0.7.6.201602180812",
+      kotlin      : "1.0.2",
+      leakCanary  : "1.4-beta2",
+      nimbledroid : "1.0.8",
+      okHttp      : "3.2.0",
+      playServices: "9.0.0",
+      retrofit    : "2.0.2",
+      rxjava      : "1.1.5",
+      rxandroid   : "1.2.0",
+      sqlBrite    : "0.6.3",
+      stetho      : "1.3.1",
+      support     : "23.+",
+      supportTest : "0.5",
+      vksdk       : "1.6.7",
+      timber      : "4.1.2",
+      rxrelay     : "1.1.0",
+      realm       : "0.88.3",
+      robolectric : "3.1-rc1"
+  ]
+
+  kotlin = [
+      plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+      stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+  ]
+
+  support = [
+      v4            : "com.android.support:support-v4:$versions.support",
+      design        : "com.android.support:design:$versions.support",
+      recyclerView  : "com.android.support:recyclerview-v7:$versions.support",
+      cardView      : "com.android.support:cardview-v7:$versions.support",
+      appCompat     : "com.android.support:appcompat-v7:$versions.support",
+      annotations   : "com.android.support:support-annotations:$versions.support",
+      vectorDrawable: "com.android.support:support-vector-drawable:$versions.support",
+      gridLayout    : "com.android.support:gridlayout-v7:$versions.support"
+  ]
+
+  anko = [
+      sdk15       : "org.jetbrains.anko:anko-sdk15:$versions.anko",
+      recyclerView: "org.jetbrains.anko:anko-recyclerview-v7:$versions.anko",
+      appCompat   : "org.jetbrains.anko:anko-appcompat-v7:$versions.anko"
+  ]
+
+  retrofit = [
+      retrofit: "com.squareup.retrofit2:retrofit:$versions.retrofit",
+      moshi   : "com.squareup.retrofit2:converter-moshi:$versions.retrofit",
+      rxjava  : "com.squareup.retrofit2:adapter-rxjava:$versions.retrofit"
+  ]
+
+  stetho = [
+      stetho: "com.facebook.stetho:stetho:$versions.stetho",
+      okhttp: "com.facebook.stetho:stetho-okhttp:$versions.stetho"
+  ]
+
+  playServices = [
+      gcm: "com.google.android.gms:play-services-gcm:$versions.playServices"
+  ]
+
+  supportTest = [
+      runner     : "com.android.support.test:runner:$versions.supportTest",
+      rules      : "com.android.support.test:rules:$versions.supportTest",
+      espresso   : "com.android.support.test.espresso:espresso-core:$versions.espresso",
+      espressoWeb: "com.android.support.test.espresso:espresso-web:$versions.espresso"
+  ]
+}
