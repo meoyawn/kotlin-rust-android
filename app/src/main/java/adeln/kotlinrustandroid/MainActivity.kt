@@ -14,7 +14,7 @@ class MainActivity : Activity() {
     setContentView(LinearLayout(this).apply {
       orientation = LinearLayout.VERTICAL
       addView(TextView(context).apply {
-        text = "this is java"
+        text = "this is kotlin"
       })
       addView(TextView(context).apply {
         text = test()
